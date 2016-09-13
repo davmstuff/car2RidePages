@@ -12,6 +12,7 @@
   </head>
 
   <body>
+  <div class="gradient"></div>
     <!-- multistep form -->
 <form id="msform">
   <!-- progressbar -->
@@ -92,14 +93,14 @@
   <fieldset>
     <h2 class="fs-title">LIST MY CAR</h2>
     <h3 class="fs-subtitle">Step 2: Pictures</h3>
-    <div class="section-left">
+    <div class="section-left" id="image_holder">
       <img src="images/myCar.jpg" alt="My Car">
     </div>
     <div class="section-rigth">
-      <input type="file" name="mon_fichier" id="mon_fichier" />
-      <input type="file" name="mon_fichier" id="mon_fichier" />
-      <input type="file" name="mon_fichier" id="mon_fichier" />
-      <input type="file" name="mon_fichier" id="mon_fichier" />
+      <input type="file" name="mon_fichier" class="mon_fichier"  />
+      <input type="file" name="mon_fichier" class="mon_fichier" />
+      <input type="file" name="mon_fichier" class="mon_fichier" />
+      <input type="file" name="mon_fichier" class="mon_fichier" />
 
     </div>
     <div class="clearfix">
@@ -169,7 +170,29 @@
       });
     </script>
 
-
+<script>
+$(".mon_fichier").on('change', function () {
+ 
+        if (typeof (FileReader) != "undefined") {
+ 
+            var image_holder = $("#image_holder");
+            image_holder.empty();
+ 
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                $("<img />", {
+                    "src": e.target.result,
+                    "class": "img-responsive img-thumbnail"
+                }).appendTo(image_holder);
+ 
+            }
+            image_holder.show();
+            reader.readAsDataURL($(this)[0].files[0]);
+        } else {
+            alert("This browser does not support FileReader.");
+        }
+    });
+</script>
 
   </body>
 </html>
