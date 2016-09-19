@@ -94,15 +94,15 @@
 					<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>		         
 		        </div>
 		        <div id="navbar" class="navbar-collapse collapse">
-				<a href="#" class="navbar-left"><img src="images/logo_only.png" width="50" height="60"></a>
+				<a href="index.html" class="navbar-left"><img src="images/logo_only.png" width="50" height="60"></a>
 		          <ul class="nav navbar-nav navbar-default">
-		            <li class="active"><a href="#" data-nav-section="home"><span>Accueil</span></a></li>
+		            <!--<li class="active"><a href="#" data-nav-section="home"><span>Accueil</span></a></li>
 		            <li><a href="#" data-nav-section="work"><span>Objectifs</span></a></li>
 		            <li><a href="#" data-nav-section="services"><span>Services</span></a></li>
-		            <li><a href="#" data-nav-section="testimonials"><span>Temoignage</span></a></li>
-		            <li><a href="#" data-nav-section="about"><span>A Propos de Nous</span></a></li>
-					<li><a id="signInLink" href="http://www.google.com" target="_blank"><span><i class="icon-user"></i> Inscription</span></a></li>
-					<li><a href="#"><span><i class="icon-sign-in"></i>  Connexion</span></a></li>
+		            <li><a href="#" data-nav-section="testimonials"><span>Temoignage</span></a></li>-->
+		            <li><a id="listMyCar" href="listMyCar.html" ><span>List my car</span></a></li>
+					<li><a id="signUpLink" href="SignUp.html" target="_blank"><span><i class="icon-sign-in"></i> Connexion</span></a></li>
+					<li><a id="signInLink" href="SignIn.html"><span><i class="icon-user"></i>  Inscription</span></a></li>
 				</ul>
 		        </div>
 			    </nav>
@@ -624,7 +624,17 @@ $(function() {
 
 <script>
 document.getElementById("signInLink").onclick = function () {
-    location.href = "https://www.google.com";
+    location.href = "Subscribe_CarRenter.html";
+};
+</script>
+<script>
+document.getElementById("signUpLink").onclick = function () {
+    location.href = "SignUp.html";
+};
+</script>
+<script>
+document.getElementById("listMyCar").onclick = function () {
+    location.href = "ListMyCar.html";
 };
 </script>
 
