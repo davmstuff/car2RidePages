@@ -5,17 +5,46 @@
 * {margin: 0; padding: 0;}
 
 html {
-	height: %;
+	height: auto%;
 	/*Image only BG fallback*/
 	/*background = gradient + image pattern combo*/
 	background:
 		linear-gradient(#3f95ea 0%, #52d3aa 100%) ;
-
+font-family: montserrat;
 }
 
 
-body {
+#fixed
+{
+	height :170%;
+}
+
+.img-responsive
+{
+ height: auto;
+ display: inline;
+}
+
+ {
 	font-family: montserrat, arial, verdana;
+}
+
+.gradient_2 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  /*z-index: 2;*/
+  opacity: 0.9;
+  -webkit-backface-visibility: hidden;
+  background-color: #52d3aa;
+  /* IE9, iOS 3.2+ */
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPjxzdG9wIHN0b3AtY29sb3I9IiMzZjk1ZWEiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIwIi8+PHN0b3Agc3RvcC1jb2xvcj0iIzUyZDNhYSIgc3RvcC1vcGFjaXR5PSIxIiBvZmZzZXQ9IjEiLz48L2xpbmVhckdyYWRpZW50PjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjdnNnZykiIC8+PC9zdmc+);
+  background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0, #3f95ea), color-stop(1, #52d3aa));
+  /* Android 2.3 */
+  background-image: -webkit-repeating-linear-gradient(top left, #3f95ea 0%, #52d3aa 100%);
+  /* IE10+ */
+  background-image: linear-gradient(to bottom right, #3f95ea 0%, #52d3aa 100%);
+  background-image: -ms-repeating-linear-gradient(top left, #3f95ea 0%, #52d3aa 100%);
 }
 
 .gradient {
@@ -42,14 +71,16 @@ body {
 
 /*form styles*/
 #msform {
-	width: 900px;
+	width: 750px;
 	margin: 50px auto;
 	text-align: center;
 	position: relative;
+
 }
 
 
 #msform fieldset {
+	font-family: montserrat;
 	background: white;
 	border: 0 none;
 	border-radius: 3px;
@@ -107,6 +138,7 @@ body {
 #msform .action-button:hover, #msform .action-button:focus {
 	box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
 }
+
 /*headings*/
 .fs-title {
 	font-size: 15px;
@@ -180,7 +212,7 @@ body {
 }
 
 img {
-    border: 1px solid #ddd;
+    /*border: 1px solid #ddd;*/
     border-radius: 4px;
 		width: 300px;
 		height: 277px;

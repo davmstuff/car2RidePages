@@ -1,104 +1,110 @@
 <!DOCTYPE html>
-<html >
+<html id ="fixed">
   <head>
     <meta charset="UTF-8">
     <title>Multi Step Form with Progress Bar using jQuery and CSS3</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style_form_2.css">
     <!-- Inclusion pour datarange -->
 	<link rel="stylesheet" type="text/css" href="css/daterangepicker.css" />
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    
 
   </head>
 
   <body>
-  <div class="gradient"></div>
-    <!-- multistep form -->
+ <div class="gradient"></div>
+  <!--    multistep form -->
 <form id="msform">
+<h3><a href="index.html"><img class=" img-responsive " src="images/logo.png" alt="My Car"></a></h3>
   <!-- progressbar -->
   <ul id="progressbar">
     <li class="active">Vehicle and details</li>
     <li>Pictures</li>
     <li>Car availability</li>
   </ul>
+  
   <!-- fieldsets -->
-  <fieldset>
+  <fieldset class="fixed">
     <h2 class="fs-title">LIST MY CAR</h2>
     <h3 class="fs-subtitle">Step 1: Vehicle and details</h3>
-    <div class="section-left">
+    <div class="section">
       <select>
-        <option value="0">Select brand</option>
+        <option value="0">Brand</option>
         <option value="1">Brand 1</option>
         <option value="2">Brand 2</option>
         <option value="3">Brand 3</option>
       </select>
       <select>
-        <option value="0">Select category</option>
+        <option value="0">Category</option>
         <option value="1">Category 1</option>
         <option value="2">Category 2</option>
         <option value="3">Category 3</option>
       </select>
       <select>
-        <option value="0">Select year</option>
+        <option value="0">Year</option>
         <option value="1">2017</option>
         <option value="2">2016</option>
         <option value="3">2015</option>
       </select>
       <select>
-        <option value="0">Select gaz type</option>
+        <option value="0">Gaz type</option>
         <option value="1">Gaz 1</option>
         <option value="2">Gaz 2</option>
         <option value="3">Gaz 3</option>
       </select>
       <select>
-        <option value="0">Select color</option>
+        <option value="0">Color</option>
         <option value="1">Color 1</option>
         <option value="2">Color 2</option>
         <option value="3">Color 3</option>
       </select>
     </div>
-    <div class="section-rigth">
+    <div class="section">
       <select>
-        <option value="0">Select model</option>
+        <option value="0">Model</option>
         <option value="1">Model 1</option>
         <option value="2">Model 2</option>
         <option value="3">Model 3</option>
       </select>
       <select>
-        <option value="0">Select odometer</option>
+        <option value="0">Odometer</option>
         <option value="1">Odometer 1</option>
         <option value="2">Odometer 2</option>
         <option value="3">Odometer 3</option>
       </select>
       <select>
-        <option value="0">Select transmission</option>
+        <option value="0">Transmission</option>
         <option value="1">Transmission 1</option>
         <option value="2">Transmission 2</option>
         <option value="3">Transmission 3</option>
       </select>
       <select>
-        <option value="0">Select nmumber of passenger</option>
-        <option value="1">Gaz 1</option>
-        <option value="2">Gaz 2</option>
-        <option value="3">Gaz 3</option>
+        <option value="0">Number of passenger</option>
+        <option value="1">5</option>
+        <option value="2">6</option>
+        <option value="3">7</option>
       </select>
     </div>
-    <div class="section-bottom">
-      <textarea name="address" placeholder="Anything elese we should know about your car ?"></textarea>
+    <div class="section ">
+      <textarea name="address" placeholder="Anything else we should know about your car ?"></textarea>
     </div>
     <div class="clearfix">
       <input type="button" name="next" class="next action-button" value="Next" />
     </div>
   </fieldset>
-  <fieldset>
+  <fieldset class="fixed">
     <h2 class="fs-title">LIST MY CAR</h2>
     <h3 class="fs-subtitle">Step 2: Pictures</h3>
-    <div class="section-left" id="image_holder">
+    <div class="section img-rounded" id="image_holder">
       <img src="images/myCar.jpg" alt="My Car">
     </div>
-    <div class="section-rigth">
+    <div class="section">
       <input type="file" name="mon_fichier" class="mon_fichier"  />
       <input type="file" name="mon_fichier" class="mon_fichier" />
+      <input type="file" name="mon_fichier" class="mon_fichier" />
+      <input type="file" name="mon_fichier" class="mon_fichier" />
+	  <input type="file" name="mon_fichier" class="mon_fichier" />
       <input type="file" name="mon_fichier" class="mon_fichier" />
       <input type="file" name="mon_fichier" class="mon_fichier" />
 
@@ -108,7 +114,7 @@
       <input type="button" name="next" class="next action-button" value="Next" />
     </div>
   </fieldset>
-  <fieldset>
+  <fieldset class="fixed">
     <h2 class="fs-title">List my car</h2>
     <h3 class="fs-subtitle">Step 3: Car availability</h3>
 
@@ -139,10 +145,6 @@
     <script type="text/javascript" src="js/index_form.js"></script>
     <!-- Start Data Picker -->
     <!-- Include Required Prerequisites -->
-
-   <!-- <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>-->
 
     <script type="text/javascript" src="js/moment.min.js"></script>
     <script type="text/javascript" src="js/daterangepicker.js"></script><!-- Bootstrap -->

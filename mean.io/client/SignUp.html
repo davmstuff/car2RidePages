@@ -1,0 +1,46 @@
+<html ng-app="Car2Ride">
+  <head>
+    <meta charset="UTF-8">
+    <title>Car2Ride - Login</title>
+        <script src="js/prefixfree.min.js"></script>
+		<link href="css/style_form.css" type="text/css" rel="stylesheet" />
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.10/angular.min.js"></script>
+  </head>
+  <body>
+    <div class="body">
+	</div>
+		<div class="grad">
+		
+		</div>
+		<div class="header">
+			<div>
+			<a href="index.html"><img class=" img-responsive " src="images/logo.png" alt="My Car"></a>
+			</div>
+		</div>
+		<br>
+		<div class="login" ng-controller="loginController">
+				<form ng-submit="login()">
+					<input type="text" placeholder="email" name="user" ng-model="loginForm.username" /><br>
+					<input type="password" placeholder="password" name="password" ng-model="loginForm.password"/><br>
+					<input type="submit" value="Login"/><br/>
+					<a>No signed in yet? click here<a/><br/>
+					<a>Forget your password? click here<a/>
+				</form>
+				<p>{{myTxt}}</p>
+				<div ng-show="error" class="alert alert-danger">{{errorMessage}}</div>
+		</div>
+		<script src="controllers/loginController.js"></script>
+		<script src="services.js"></script>
+		<!--<script src="main.js"></script>
+		<script src="controllers/angular-load.js"></script>
+        -->
+        
+        
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+    
+    
+    
+    
+  </body>
+</html>
