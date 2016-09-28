@@ -24,9 +24,9 @@ Car2Ride.config(function ($routeProvider) {
       controller: 'registerController',
       access: {restricted: false}
     })
-	.when('/test', {
-      templateUrl: 'views/loginCopy.html',
-      access: {restricted: false}
+	.when('/profile', {
+      templateUrl: '../profile.html',
+      access: {restricted: true}
     })
     .otherwise({
       redirectTo: '/'

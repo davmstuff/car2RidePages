@@ -51,6 +51,10 @@ app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, '../client', 'index.html'));
 });
 
+app.get('/profile', function (req, res) {
+    res.sendFile(path.join(__dirname, '../client', 'profile.html'));
+});
+
 app.get('/connexion', function (req, res) {
     res.sendFile(path.join(__dirname, '../client', 'SignUp.html'));
 });

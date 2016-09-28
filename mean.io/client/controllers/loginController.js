@@ -14,7 +14,7 @@ app.controller('loginController',
                             // handle success
                             .then(function () {
                                 //$location.path('/zabuza');
-								$window.location.href = '/zabuza';
+								$window.location.href = '/profile';
                                 $scope.disabled = false;
                                 $scope.loginForm = {};
                             })

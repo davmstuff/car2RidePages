@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- This file has been downloaded from Bootsnipp.com. Enjoy! -->
+    <title>Car2Ride Profile Page</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		
+	<!--<link href="css/bootstrap.css" rel="stylesheet">	-->
+	<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style_form.css" type="text/css" rel="stylesheet" />
+	
+	<script src="js/prefixfree.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+<link rel="shortcut icon" href="favicon.ico">
+
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="css/style.css">
+
+	</head>
+	<body>
+	<header role="banner" id="">
+			<div class="container">
+			    <nav class="navbar navbar-inverse">
+		        <div class="navbar-header">
+		        	<!-- Mobile Toggle Menu Button -->
+					<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>		         
+		        </div>
+		        <div id="navbar" class="navbar-collapse ">
+				<a href="index.html" class="navbar-left"><img src="images/logo.png" width="" height="60"></a>
+		          <ul class="nav navbar-nav navbar-inverse">
+		            <li><a id="listCar" href="listMyCar.html"><span>List my car</span></a></li>
+					<li><a id="connexion" href="SignUp.html" target="_blank"><span><i class="icon-sign-in"></i> Connexion</span></a></li>
+					<li><a id="registration" href="SignIn.html"><span><i class="icon-user"></i>  Inscription</span></a></li>
+				</ul>
+		        </div>
+			    </nav>
+		  </div>
+	</header>
+	<div class="container well">
+	<div class="row" >
+		<div class="col-sm-2"><img src="images/logo_only.png" class="img-responsive"/></div>
+	</div>
+	<div class="row" >
+		<div class="col-sm-2"><img src="images/logo_only.png" class="img-responsive"/></div>
+	    <div class="col-sm-4">Add a car</div>
+	    <div class="col-sm-4">Start a reservation</div>
+	</div>
+	<div class="row" >
+		<div class="col-sm-2"><img src="images/logo_only.png" class="img-responsive"/></div>
+	    <div class="col-sm-4">Add a car</div>
+	    <div class="col-sm-4">Start a reservation</div>
+	</div>
+	<p>Welcome back, $User</p>
+	<div class="row">
+		<div class="col-*-*"></div>
+	</div>
+	<ul class="nav nav-tabs">
+  <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+  <li><a data-toggle="tab" href="#menu1">My cars</a></li>
+  <li><a data-toggle="tab" href="#menu2">My rentals</a></li>
+</ul>
+
+<div class="tab-content">
+  <div id="home" class="tab-pane fade in active">
+    <h3>HOME</h3>
+    <p>Some content.</p>
+  </div>
+  <div id="menu1" class="tab-pane fade">
+    <h3>Menu 1</h3>
+    <p>Some content in menu 1.</p>
+  </div>
+  <div id="menu2" class="tab-pane fade">
+    <h3>Menu 2</h3>
+    <p>Some content in menu 2.</p>
+  </div>
+</div>
+<link href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css" rel="stylesheet" media="screen"> 
+
+<script type="text/javascript">
+$(document).ready(function() {
+    var $btnSets = $('#responsive'),
+    $btnLinks = $btnSets.find('a');
+ 
+    $btnLinks.click(function(e) {
+        e.preventDefault();
+        $(this).siblings('a.active').removeClass("active");
+        $(this).addClass("active");
+        var index = $(this).index();
+        $("div.user-menu>div.user-menu-content").removeClass("active");
+        $("div.user-menu>div.user-menu-content").eq(index).addClass("active");
+    });
+});
+
+$( document ).ready(function() {
+    $("[rel='tooltip']").tooltip();    
+ 
+    $('.view').hover(
+        function(){
+            $(this).find('.caption').slideDown(250); //.fadeIn(250)
+        },
+        function(){
+            $(this).find('.caption').slideUp(250); //.fadeOut(205)
+        }
+    ); 
+});
+</script>
+</body>
+</html>
