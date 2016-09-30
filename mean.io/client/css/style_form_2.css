@@ -99,7 +99,7 @@ font-family: montserrat;
 	display: none;
 }
 /*inputs*/
-#msform input, #msform textarea {
+#msform textarea {
 	padding: 15px;
 	border: 1px solid #ccc;
 	border-radius: 3px;
@@ -110,7 +110,49 @@ font-family: montserrat;
 	color: #2C3E50;
 	font-size: 13px;
 }
+.halfsize_input input
+{
+padding: 15px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	width: 50%;
+	box-sizing: border-box;
+	font-family: montserrat;
+	color: #2C3E50;
+	font-size: 13px;
+}
+.halfsize_input select
+{
+padding: 15px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	width: 50%;
+	box-sizing: border-box;
+	font-family: montserrat;
+	color: #2C3E50;
+	font-size: 13px;
+}
 
+.halfsize_input label
+{
+	margin-top : 18px;
+	border-radius: 3px;
+	font-size: 13px;
+}
+.fullsize_input input
+{
+padding: 15px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	width: 100%;
+	box-sizing: border-box;
+	font-family: montserrat;
+	color: #2C3E50;
+	font-size: 13px;
+}
 /* select combobox */
 #msform select {
     padding: 15px;

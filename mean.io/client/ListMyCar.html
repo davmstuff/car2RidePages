@@ -28,7 +28,7 @@
   <fieldset class="fixed">
     <h2 class="fs-title">LIST MY CAR</h2>
     <h3 class="fs-subtitle">Step 1: Vehicle and details</h3>
-    <div class="section">
+    <div class="section fullsize_input">
 	  <input type="text" name="adress" placeholder="Car Brand" />
 	  <input type="text" name="adress" placeholder="Car Category" />
 	  <input type="text" name="adress" placeholder="Car Model" />
@@ -36,9 +36,24 @@
 	  <input type="text" name="adress" placeholder="Car Odometer" />
       <select>
 	  <option disabled selected> Car Year</option>
-        <option value="1">2017</option>
-        <option value="2">2016</option>
-        <option value="3">2015</option>
+        <option value="2017">2017</option>
+        <option value="2016">2016</option>
+        <option value="2015">2015</option>
+		<option value="2014">2014</option>
+		<option value="2013">2013</option>
+		<option value="2012">2012</option>
+		<option value="2011">2011</option>
+		<option value="2010">2010</option>
+		<option value="2009">2009</option>
+		<option value="2008">2008</option>
+		<option value="2007">2007</option>
+		<option value="2006">2006</option>
+		<option value="2005">2005</option>
+		<option value="2004">2004</option>
+		<option value="2003">2003</option>
+		<option value="2002">2002</option>
+		<option value="2001">2001</option>
+		<option value="2000">2000</option>
       </select>
 	  <select>
 	  <option disabled selected> Car Transmission</option>
@@ -47,7 +62,8 @@
       </select>
       <select>
 	  <option disabled selected> Car Energy</option>
-        <option value="0">Gas</option>
+        <option value="0">Essence</option>
+		<option value="0">Diesel</option>
         <option value="1">Hybrid</option>
 		<option value="1">Electric</option>
       </select>
@@ -55,8 +71,8 @@
     <div class="section">
       <select>
         <option disabled selected>Number of passenger</option>
-        <option value="1">5</option>
-        <option value="2">6</option>
+        <option value="1">2</option>
+        <option value="2">5</option>
         <option value="3">7</option>
       </select>
     </div>
@@ -73,14 +89,42 @@
     <div class="section img-rounded" id="image_holder">
       <img src="images/myCar.jpg" alt="My Car">
     </div>
-    <div class="section">
-      <input type="file" name="mon_fichier" class="mon_fichier"  />
-      <input type="file" name="mon_fichier" class="mon_fichier" />
-      <input type="file" name="mon_fichier" class="mon_fichier" />
-      <input type="file" name="mon_fichier" class="mon_fichier" />
-	  <input type="file" name="mon_fichier" class="mon_fichier" />
-      <input type="file" name="mon_fichier" class="mon_fichier" />
-      <input type="file" name="mon_fichier" class="mon_fichier" />
+    <div class="section halfsize_input">
+		<label class="col-sm-4">Front picture</label>
+		<div  class=" has-success has-feedback">
+			<input type="file" placeholder="Image" class="mon_fichier"/>
+			<span class=" col-xs-2 form-control-feedback glyphicon glyphicon-picture"></span>
+		</div>
+		<label class="col-sm-4">Back picture</label>
+		<div  class=" has-success has-feedback">
+			<input type="file" placeholder="Image" class="mon_fichier"/>
+			<span class=" col-xs-2 form-control-feedback glyphicon glyphicon-picture"></span>
+		</div>
+		<label class="col-sm-4">Right picture</label>
+		<div  class=" has-success has-feedback">
+			<input type="file" placeholder="Image" class="mon_fichier"/>
+			<span class=" col-xs-2 form-control-feedback glyphicon glyphicon-picture"></span>
+		</div>
+		<label class="col-sm-4">Left picture</label>
+		<div  class=" has-success has-feedback">
+			<input type="file" placeholder="Image" class="mon_fichier"/>
+			<span class=" col-xs-2 form-control-feedback glyphicon glyphicon-picture"></span>
+		</div>
+		<label class="col-sm-4">Odometer picture</label>
+		<div  class=" has-success has-feedback">
+			<input type="file" placeholder="Image" class="mon_fichier"/>
+			<span class=" col-xs-2 form-control-feedback glyphicon glyphicon-picture"></span>
+		</div>
+		<label class="col-sm-4">Car Inside picture #1</label>
+		<div  class=" has-success has-feedback">
+			<input type="file" placeholder="Image" class="mon_fichier"/>
+			<span class=" col-xs-2 form-control-feedback glyphicon glyphicon-picture"></span>
+		</div>
+		<label class="col-sm-4">Car Inside picture #2</label>
+		<div  class=" has-success has-feedback">
+			<input type="file" placeholder="Image" class="mon_fichier"/>
+			<span class=" col-xs-2 form-control-feedback glyphicon glyphicon-picture"></span>
+		</div>
 
     </div>
     <div class="clearfix">
@@ -88,7 +132,7 @@
       <input type="button" name="next" class="next action-button" value="Next" />
     </div>
   </fieldset>
-  <fieldset class="fixed">
+  <fieldset class="fixed fullsize_input">
     <h2 class="fs-title">List my car</h2>
     <h3 class="fs-subtitle">Step 3: Car availability</h3>
 
@@ -104,13 +148,18 @@
       <p>*** Please note that you car needs to be available for at least 24 hours ***</p>
       <input type="checkbox" name="vehicle" value="Bike" style="width:20px"> My car is available any days at any time
       <select>
-        <option value="0">Select Maximum km allowed per day </option>
+        <option disabled selected>Select Maximum km allowed</option>
         <option value="1">0 to 100km</option>
         <option value="2">100 to 200km</option>
         <option value="3">200 to 300km</option>
         <option value="4">300 to 500km</option>
-      </select>   
-      <input type="text" name="adress" placeholder="Price per day: Enter Amount" />
+      </select>
+	  <select class="halfsize_input">
+        <option disabled selected>Type of pricing </option>
+        <option value="1">Per day</option>
+        <option value="2">Per week</option>
+      </select>  	  
+      <input type="number" name="price" placeholder="Price per day: Enter Amount" />
       <input type="checkbox" name="vehicle" value="Bike" style="width:20px"> Auto-confirm reservation when someone rent my car within the selected days of availability
     </div>
 
