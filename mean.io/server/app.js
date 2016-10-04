@@ -14,6 +14,7 @@ var localStrategy = require('passport-local').Strategy;
 var configDB = require('./config/database.js');
 mongoose.connect(configDB.url); // connect to our database
 
+var Car = require('./models/car.js');
 // user schema/model
 var User = require('./models/user.js');
 
@@ -22,6 +23,8 @@ var app = express();
 
 // require routes
 var routes = require('./routes/api.js');
+var reservation_routes = require('./routes/reservationAPI.js');
+var car_routes = require('./routes/carAPI.js');
 
 // define middleware
 app.use(express.static(path.join(__dirname, '../client')));
@@ -46,6 +49,8 @@ passport.deserializeUser(User.deserializeUser());
 
 // routes
 app.use('/user/', routes);
+app.use('/reservation/', reservation_routes);
+app.use('/car/', car_routes);
 
 app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, '../client', 'index.html'));
@@ -65,6 +70,9 @@ app.get('/listCar', function (req, res) {
 
 app.get('/inscription', function (req, res) {
     res.sendFile(path.join(__dirname, '../client', 'Subscribe_CarRenter.html'));
+});
+app.get('/reserve', function (req, res) {
+    res.sendFile(path.join(__dirname, '../client', 'reservation.html'));
 });
 // error hndlers
 app.use(function (req, res, next) {

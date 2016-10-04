@@ -13,7 +13,6 @@ app.controller('loginController',
                     AuthService.login($scope.loginForm.username, $scope.loginForm.password)
                             // handle success
                             .then(function () {
-                                //$location.path('/zabuza');
 								$window.location.href = '/profile';
                                 $scope.disabled = false;
                                 $scope.loginForm = {};
